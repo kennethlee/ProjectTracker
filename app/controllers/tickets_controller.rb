@@ -6,7 +6,7 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket = @project.tickets.build(tickets_params)
+    @ticket = @project.tickets.build(ticket_params)
 
     if @ticket.save
       flash[:notice] = "Ticket has been created."
@@ -24,6 +24,6 @@ class TicketsController < ApplicationController
     end
 
     def ticket_params
-      require(:ticket).permit(:name, :description)
+      params.require(:ticket).permit(:name, :description)
     end
 end
