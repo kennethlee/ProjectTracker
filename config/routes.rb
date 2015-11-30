@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   # non-admin routes for projects
-  resources :projects, only: [:ndex, :show, :edit, :update] do
+  resources :projects, only: [:index, :show, :edit, :update] do
     resources :tickets
   end
 
