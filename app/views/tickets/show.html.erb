@@ -38,10 +38,23 @@
       <% @ticket.attachments.each do |attachment| %>
         <p>
           <%= link_to File.basename(attachment.file.url),
-            attachment.file.url %>
+            attachment_path(attachment) %>
           (<%= number_to_human_size(attachment.file.size) %>)
         </p>
       <% end %>
     </div>
   <% end %>
+
+  <%# <% if @ticket.attachments.any? %1> %>
+  <%#   <h4>Attachment</h4> %>
+  <%#   <div class="attachments"> %>
+  <%#     <% @ticket.attachments.each do |attachment| %1> %>
+  <%#       <p> %>
+  <%#         <%= link_to File.basename(attachment.file.url), %>
+  <%#           attachment.file.url %1> %>
+  <%#         (<%= number_to_human_size(attachment.file.size) %1>) %>
+  <%#       </p> %>
+  <%#     <% end %1> %>
+  <%#   </div> %>
+  <%# <% end %1> %>
 </div>

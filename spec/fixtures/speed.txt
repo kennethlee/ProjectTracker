@@ -1,3 +1,1 @@
-Here be some random text for the purpose of testing attachments for tickets.
-
-YAR.
+The blink tag can blink faster if you use the speed="hyper" attribute.
