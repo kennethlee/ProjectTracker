@@ -44,17 +44,19 @@
       <% end %>
     </div>
   <% end %>
-
-  <%# <% if @ticket.attachments.any? %1> %>
-  <%#   <h4>Attachment</h4> %>
-  <%#   <div class="attachments"> %>
-  <%#     <% @ticket.attachments.each do |attachment| %1> %>
-  <%#       <p> %>
-  <%#         <%= link_to File.basename(attachment.file.url), %>
-  <%#           attachment.file.url %1> %>
-  <%#         (<%= number_to_human_size(attachment.file.size) %1>) %>
-  <%#       </p> %>
-  <%#     <% end %1> %>
-  <%#   </div> %>
-  <%# <% end %1> %>
 </div>
+
+<header>
+  <h3>Comments</h3>
+</header>
+<div id="comments">
+  <% if @ticket.comments.persisted.any? %>
+    <%= render @ticket.comments.persisted %>
+  <% else %>
+    <p>There are no comments for this ticket.</p>
+  <% end %>
+</div>
+
+<% if policy(@comment).create? %>
+  <%= render 'comments/form', ticket: @ticket, comment: @comment %>
+<% end %>
