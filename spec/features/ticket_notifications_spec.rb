@@ -22,7 +22,7 @@ RSpec.feature "Users can receive notifications about ticket updates" do
 
     email = find_email!(alice.email)
     expected_subject = "[ProjectTracker] #{project.name} - #{ticket.name}"
-    expected(email.subject).to eq expected_subject
+    expect(email.subject).to eq expected_subject
 
     click_first_link_in_email(email)
     expect(current_path).to eq project_ticket_path(project, ticket)
