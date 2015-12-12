@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -8,6 +9,7 @@ gem 'sqlite3', group: [:development, :test]
 gem 'pg',      group:  :production
 
 gem 'rails_12factor', group: :production
+gem 'puma', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
