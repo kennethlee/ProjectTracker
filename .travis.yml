@@ -2,5 +2,12 @@ language: ruby
 rvm: 2.2.1
 script: bundle exec rspec
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+deploy:
+  provider: heroku
+  api_key:
+    secure: AgItq/9pfJbiVskBDa8CdLmCEPYsTCXaxnA0+uV4aPUMeXHVRfaMeIH+/j92PAWrzbhCnBcM+5LVg0xTLve+klE4hCISCjHh7gCXCbLv4zkdu/Zii9O23Z4CS3AAANtG5lqAsYri1gsRJ6xubzJ8y9NY+AvqX65e91DyYD95qtTAtcQ7IGE4/CXiJupjw+exV1uVSyZw/2aPRjLo2v1L5EqmjvKoTc54c8X+VFx4otFlmYpn8V2HMBwqlTqq6t8pJG7vy1InhPiwSVX0znz0Ladfx6z2r9I1dsQqfIx9z4tASe+Us6Ag0qcmN+N303Qof6BgX+OrTyzK/oQHRk/924WLD9XQCtw0+QL3riXzyhT8bs5B6pxh2+1Rc25q2tlu1j0jJ/4pni9KE5kRSIJUKY547fsf+EFjvm6yH/YZXFrIl2Eeq81llz7lV7GGd/HdIMW8+4GLTfgU7G6rlyEr5s6XVsWylTOxwVUvUELyQzqarQbwDp9TaQhY1nAh7TvX8Y+whrHs/WH+NhRta+ZLt3dVU7qSpnib3e32aAaUNJ3fcMbsPak2OkrYFC4NvCAuykDVbeHHprl4ZA364zJWoRiEBQK7E2U44lCx0CN5lbmNCsxfjWm6sydrp6UMjh3PXl1HIZp1WvyrXsVAVpaoab3d+4QF4jw/F3TqnWGW1K8=
+  app: proj-tracker
+  on:
+    repo: kennethlee/ProjectTracker
