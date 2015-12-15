@@ -45,7 +45,7 @@
   }
 }
 
-.watch .unwatch {
+.watch, .unwatch {
   @extend .btn;
   @extend .btn-xs;
   font-weight: bold;
