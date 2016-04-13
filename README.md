@@ -1,4 +1,4 @@
-# ProjectTracker [![Build Status](https://travis-ci.org/kennethlee/ProjectTracker.svg?branch=master)](https://travis-ci.org/kennethlee/ProjectTracker)
+# [ProjectTracker](https://proj-tracker.herokuapp.com/) [![Build Status](https://travis-ci.org/kennethlee/ProjectTracker.svg?branch=master)](https://travis-ci.org/kennethlee/ProjectTracker)
 
 ProjectTracker is a basic project management system (think of it as a simpler version of Pivotal Tracker) created using Ruby on Rails. This app was written using the TDD (Test-Driven Development) software methodology and includes a full test suite. Continuous deployment is handled by Travis CI.
 
@@ -23,6 +23,8 @@ ProjectTracker is a basic project management system (think of it as a simpler ve
 - Platform: Heroku
 - Continuous deployment via Travis CI
 - File store: Amazon S3
+
+Click the project's screenshot below to be taken directly to the live project:
 
 <div align="center">
   <a href="https://proj-tracker.herokuapp.com/"><img src="http://i.imgur.com/bDH4PpW.png" /></a>
