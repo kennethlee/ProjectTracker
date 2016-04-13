@@ -23,3 +23,7 @@ ProjectTracker is a basic project management system (think of it as a simpler ve
 - Platform: Heroku
 - Continuous deployment via Travis CI
 - File store: Amazon S3
+
+<div align="center">
+  <a href="https://proj-tracker.herokuapp.com/"><img src="http://i.imgur.com/bDH4PpW.png" /></a>
+</div>
